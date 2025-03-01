@@ -8,7 +8,8 @@ CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 #fichiers sources
-SRCS = main.cpp \
+SRCS = Animal.cpp \
+	main.cpp \
 
 #creation d'objets a partir des fichiers sources
 OBJS = $(SRCS:.cpp=.o)
