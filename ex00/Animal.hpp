@@ -2,6 +2,7 @@
 #define ANIMAL_HPP
 
 #include <iostream>
+#include <cstring>
 
 #define BOLD "\033[1m"
 #define RED "\033[38;2;255;0;0m"
@@ -20,6 +21,8 @@ class Animal
         ~Animal();
 
         std::string getType() const;
+        
+        void makeSound() const;
 };
 
 class Dog : public Animal
@@ -43,5 +46,6 @@ class Cat : public Animal
         Cat &operator=( const Cat &autre );//surcharge de l'operateur d'affectation
         ~Cat();
 };
+
 
 #endif

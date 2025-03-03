@@ -33,6 +33,14 @@ std::string Animal::getType() const
     return _type;
 }
 
+void Animal::makeSound() const
+{
+    if (strcmp(getType().c_str(), "Dog") == 0)
+        std::cout << "wouaf wouaf" << std::endl;
+    else if (strcmp(getType().c_str(), "Cat") == 0)
+        std::cout << "meow meow" << std::endl;
+}
+
 
 
 
@@ -58,7 +66,6 @@ Dog::~Dog()
 {
     std::cout << BOLD RED << "Destructeur (Dog): " << RESET << std::endl;
 }
-
 
 
 
