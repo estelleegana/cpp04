@@ -20,5 +20,10 @@ int main()
     std::cout << meta2->getType() << " " << std::endl;
     i2->makeSound();
     meta2->makeSound();
+    delete meta;
+    delete i;
+    delete j;
+    delete meta2;
+    delete i2;
 }
     
