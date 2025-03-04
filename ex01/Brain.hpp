@@ -19,3 +19,5 @@ class Brain
         Brain &operator=( const Brain &autre );//surcharge de l'operateur d'affectation
         ~Brain();
 };
+
+#endif

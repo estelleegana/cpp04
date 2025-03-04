@@ -1,5 +1,6 @@
 #include "Animal.hpp"
 #include "WrongAnimal.hpp"
+#include "Brain.hpp"
 
 int main()
 {

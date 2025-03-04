@@ -9,6 +9,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 #fichiers sources
 SRCS = Animal.cpp \
+	Brain.cpp \
 	main.cpp \
 	WrongAnimal.cpp \
 

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstring>
+#include "Brain.hpp"
 
 #define BOLD "\033[1m"
 #define RED "\033[38;2;255;0;0m"
@@ -29,6 +30,7 @@ class Dog : public Animal
 {
     private:
         std::string _type;
+        Brain* br;
     public:
         Dog();
         Dog( const Dog &autre );//constructeur de recopie
@@ -40,6 +42,7 @@ class Cat : public Animal
 {
     private:
         std::string _type;
+        Brain *br;
     public:
         Cat();
         Cat( const Cat &autre );//constructeur de recopie

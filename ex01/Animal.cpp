@@ -47,6 +47,7 @@ void Animal::makeSound() const
 //--------------------_DOG
 Dog::Dog() : _type("Dog"), Animal("Dog")
 {
+    new Brain();
     std::cout << BOLD GREEN << "Constructeur par defaut (Dog): " << RESET << _type << std::endl;
 }
 
@@ -64,6 +65,7 @@ Dog &Dog::operator=(const Dog &autre)
 
 Dog::~Dog()
 {
+    delete br;
     std::cout << BOLD RED << "Destructeur (Dog): " << RESET << std::endl;
 }
 
@@ -73,6 +75,7 @@ Dog::~Dog()
 //-----------------------CAT
 Cat::Cat() : _type("Cat"), Animal("Cat")
 {
+    new Brain();
     std::cout << BOLD GREEN << "Constructeur par defaut (Cat): " << RESET << _type << std::endl;
 }
 
@@ -90,5 +93,6 @@ Cat &Cat::operator=(const Cat &autre)
 
 Cat::~Cat()
 {
+    delete br;
     std::cout << BOLD RED << "Destructeur (Cat): " << RESET << std::endl;
 }
