@@ -30,7 +30,7 @@ class Dog : public Animal
 {
     private:
         std::string _type;
-        Brain* br;
+        Brain* _br;
     public:
         Dog();
         Dog( const Dog &autre );//constructeur de recopie
@@ -42,7 +42,7 @@ class Cat : public Animal
 {
     private:
         std::string _type;
-        Brain *br;
+        Brain *_br;
     public:
         Cat();
         Cat( const Cat &autre );//constructeur de recopie
