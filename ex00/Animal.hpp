@@ -11,41 +11,43 @@
 
 class Animal
 {
-    private:
+    protected:
         std::string _type;
     public:
         Animal();
         Animal(std::string type);
         Animal( const Animal &autre );//constructeur de recopie
         Animal &operator=( const Animal &autre );//surcharge de l'operateur d'affectation
-        ~Animal();
+        virtual ~Animal();
 
         std::string getType() const;
-        
-        void makeSound() const;
+        virtual void makeSound() const;
 };
 
 class Dog : public Animal
 {
-    private:
-        std::string _type;
+    // private:
+    //     std::string _type;
     public:
         Dog();
         Dog( const Dog &autre );//constructeur de recopie
         Dog &operator=( const Dog &autre );//surcharge de l'operateur d'affectation
         ~Dog();
+
+        void makeSound() const;
 };
 
 class Cat : public Animal
 {
-    private:
-        std::string _type;
+    // private:
+    //     std::string _type;
     public:
         Cat();
         Cat( const Cat &autre );//constructeur de recopie
         Cat &operator=( const Cat &autre );//surcharge de l'operateur d'affectation
         ~Cat();
-};
 
+        void makeSound() const;
+};
 
 #endif

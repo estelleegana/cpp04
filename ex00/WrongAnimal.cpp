@@ -6,11 +6,6 @@ WrongAnimal::WrongAnimal()
     std::cout << BOLD GREEN << "Constructeur par defaut (WrongAnimal): " << RESET << _type << std::endl;
 }
 
-WrongAnimal::WrongAnimal(std::string type) : _type(type)
-{
-    std::cout << BOLD GREEN << "Constructeur ac _type (WrongAnimal): " << RESET << _type << std::endl;
-}
-
 WrongAnimal::WrongAnimal(const WrongAnimal &autre)
 {
     *this = autre;
@@ -35,16 +30,16 @@ std::string WrongAnimal::getType() const
 
 void WrongAnimal::makeSound() const
 {
-    if (strcmp(getType().c_str(), "WrongCat") == 0)
-        std::cout << "pas bon chat" << std::endl;
+    std::cout << "pas bon chat" << std::endl;
 }
 
 
 
 
 //---------------------WrongCat
-WrongCat::WrongCat() : _type("WrongCat"), WrongAnimal("WrongCat")
+WrongCat::WrongCat()
 {
+    _type = "WrongCat";
     std::cout << BOLD GREEN << "Constructeur par defaut (WrongCat): " << RESET << _type << std::endl;
 }
 
@@ -63,4 +58,9 @@ WrongCat &WrongCat::operator=(const WrongCat &autre)
 WrongCat::~WrongCat()
 {
     std::cout << BOLD RED << "Destructeur (WrongCat): " << RESET << std::endl;
+}
+
+void WrongCat::makeSound() const
+{
+    std::cout << "meowww" << std::endl;
 }
