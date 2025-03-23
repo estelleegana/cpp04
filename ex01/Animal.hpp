@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <cstring>
-#include "Brain.hpp"
 
 #define BOLD "\033[1m"
 #define RED "\033[38;2;255;0;0m"
@@ -12,43 +11,18 @@
 
 class Animal
 {
-    private:
+    protected:
         std::string _type;
+        
     public:
         Animal();
         Animal(std::string type);
-        Animal( const Animal &autre );//constructeur de recopie
-        Animal &operator=( const Animal &autre );//surcharge de l'operateur d'affectation
-        ~Animal();
+        Animal( const Animal &autre );
+        Animal &operator=( const Animal &autre );
+        virtual ~Animal();
 
         std::string getType() const;
-        
-        void makeSound() const;
+        virtual void makeSound() const;
 };
-
-class Dog : public Animal
-{
-    private:
-        std::string _type;
-        Brain* _br;
-    public:
-        Dog();
-        Dog( const Dog &autre );//constructeur de recopie
-        Dog &operator=( const Dog &autre );//surcharge de l'operateur d'affectation
-        ~Dog();
-};
-
-class Cat : public Animal
-{
-    private:
-        std::string _type;
-        Brain *_br;
-    public:
-        Cat();
-        Cat( const Cat &autre );//constructeur de recopie
-        Cat &operator=( const Cat &autre );//surcharge de l'operateur d'affectation
-        ~Cat();
-};
-
 
 #endif

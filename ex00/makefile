@@ -9,8 +9,11 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 #fichiers sources
 SRCS = Animal.cpp \
+	Cat.cpp \
+	Dog.cpp \
 	main.cpp \
 	WrongAnimal.cpp \
+	WrongCat.cpp \
 
 #creation d'objets a partir des fichiers sources
 OBJS = $(SRCS:.cpp=.o)
